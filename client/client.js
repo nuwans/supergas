@@ -17,7 +17,7 @@ let initialState = {
   }],
   user: {
     username: 'Nuwan',
-    id: 13
+    id: 1
   }
 }
 
