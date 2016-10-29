@@ -12,8 +12,8 @@ class App extends React.Component {
     const { location } = this.props;
     return (
       <div className="main_wrapper">
-        <Header></Header>
-        <div>
+        <Header actions={this.props.actions} user={this.props.user}></Header>
+        <div  className="content_wrap">
           {this.props.children}
         </div>
       </div>

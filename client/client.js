@@ -17,7 +17,8 @@ let initialState = {
   }],
   user: {
     username: 'Nuwan',
-    id: 1
+    id: 1,
+    logged:true
   }
 }
 
