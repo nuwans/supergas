@@ -6,4 +6,4 @@ use
 
 1.clone this repo
 2. run "npm install" command
-3.run "npm run serve"
+3. run "npm run serve"
