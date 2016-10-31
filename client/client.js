@@ -10,6 +10,8 @@ import App from '../pages/App';
 import AppDefault from '../pages/AppOtp';
 import AppDefault1 from '../pages/AppOtp1';
 import BookingForm from '../pages/BookingForm';
+import BookingForm1 from '../pages/BookingForm1';
+import Complains from '../pages/Complains';
 /*import App from '../components/App';*/
 import configureStore from '../redux/store';
 import { Provider } from 'react-redux';
@@ -36,6 +38,7 @@ render(
         <Route path="/" component={App}>
             <IndexRoute component={Homepage}></IndexRoute>
             <Route path="page2" component={Homepage2}></Route>
+            <Route path="complains" component={Complains}></Route>
             
         </Route>
         <Route path="/" component={AppDefault}>
@@ -44,6 +47,7 @@ render(
         </Route>
         <Route path="/" component={AppDefault1}>
             <Route path="bookingform" component={BookingForm}></Route>
+            <Route path="bookingform1" component={BookingForm1}></Route>
         </Route>
     </Router>
   </Provider>,

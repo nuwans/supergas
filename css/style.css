@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500');
 body{
     background: #ffffff;
     text-align: center;
@@ -9,7 +10,7 @@ body{
     width: 100%;
     max-width:720px;
     margin: auto;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 .header{
@@ -83,6 +84,7 @@ body{
     width: 50%;
     float: left;
     line-height: 74px;
+    font-family: 'Roboto';
     text-align: center;
     /*padding-top: 25px;*/
     font-size: 28px;
@@ -273,7 +275,7 @@ select:focus{
     outline: none;
 }
 /*Booking form*/
-.num_select{
+/*.num_select{
     width: 100%;
     font-size: 32px;
     color: #000000;
@@ -285,8 +287,56 @@ select:focus{
     background: url('/images/icons/account_dropdown.svg') no-repeat right #ffffff;
     -webkit-appearance: none;
 }
+.num_select>option{
+    padding:5px 10px;
+
+}
 .num_select:focus{
     outline: none;
+}*/
+.top_dropdown{
+    width: 100%; 
+    position: relative;
+    font-family: 'Roboto';
+    font-size: 28px;
+    height: 80px;
+    background: #ffffff;
+}
+.sel_number{
+    display: block;
+    text-align: center;
+    line-height: 65px;
+    margin-bottom: 0;
+}
+.selected_op{
+    width: 80%;
+    display: inline-block;
+    text-align: center;
+}
+.open_dd{
+    width: 10%;
+    float: right;
+}
+.dd_list{
+    padding: 0;
+    background: rgba(0,0,0,0.69);
+    position: absolute;
+    width: 100%;
+    margin-top: 0;
+    left: 0;
+    z-index: 3;
+    padding-bottom: 150%;
+}
+.dd_list li{
+    background: #ffffff;
+    list-style: none;
+    width: 100%;
+    padding: 15px 5%;
+    text-align: left;
+    height: 40px;
+}
+.add_number{
+    color: #f78457;
 }
 .l_a_c{
     width: 90%;
@@ -366,4 +416,49 @@ select:focus{
 .half input , .half select{
     font-family: 'Roboto';
     font-size: 22px;
+}
+.error_div{
+    background-color: #f3ebd3;
+    width: 90%;
+    display: inline-block;
+    margin: 5px auto;
+    padding: 15px 0;
+    font-size: 24px;
+    color: #a09627;
+    font-weight: 100;
+}
+.error_div ul{
+    margin: 0;
+}
+.error{
+    text-align: initial;
+}
+
+/*Complains*/
+
+.compl_radio{
+    width: 90%;
+    font-size: 28px;
+    color: #000000;
+    height: 80px;
+    font-weight: 400;
+    border: none;
+    margin: 15px auto;
+}
+.c_r_r{
+    width: 10%;
+    display: flex;
+    float: left;
+    line-height: 80px;
+}
+.c_r_r input{
+    height: 30px;
+    width: 30px;
+    margin: auto;
+}
+.c_r_label{
+    float: left;
+    width: 90%;
+    font-weight: lighter;
+    text-align: left;
 }

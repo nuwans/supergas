@@ -17,7 +17,7 @@ export default class Header extends React.Component {
               </div>
             }
             
-            <div className="h_options">  <img src="/images/header/back.png"></img> </div>
+            <div className="h_options">  <img src="/images/header/more.svg"></img> </div>
           </div>
           <div className="nav_tab_wrap">
             <div className="nav_tab">
