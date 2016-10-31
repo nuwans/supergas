@@ -1,4 +1,4 @@
-# react-todo-list
+# Supergas
 
 This is a simple todo list app built with React, Redux and Webpack. 
 use 
