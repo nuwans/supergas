@@ -1,26 +1,30 @@
 import React from "react";
 import {Link } from "react-router";
 import Input from '../components/TextInput';
+import Select from '../components/Select';
 export default class Home extends React.Component {
 
   constructor(props, context) {
     super(props, context)
-    console.log(this.props);
-    console.log(this.state);
     this.state = {
-      pincode: ''
+      phoneNumber:''
     }
   } 
-  handleChange(e){
-    this.setState({pincode:e.target.value});
+  handleChange(name,value){
+    console.log(name);
+    var temp={};
+    temp[name]=value;
+    this.setState(temp);
   }
   render() {
     return (
       <div className="content">
         <div className="form">
-          <input className='f_input' type="text" onChange={this.handleChange.bind(this)} placeholder="Pin Code"></input>
-          <button className="f_btn">Next</button>
+          <div className="f_label">Registerd Phone Number</div>
+          <input type="text" className="f_input_default" ></input>
+          <button className="f_btn">PROCEED TO REFIL</button>
         </div>
+        
       </div>
     );
   }
