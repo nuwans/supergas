@@ -15,10 +15,17 @@ export default class Header extends React.Component {
               <div className="h_content"> 
                 <div className="h_title">New Connection</div>
               </div>
-              
             }
             
             <div className="h_options">  <img src="/images/header/back.png"></img> </div>
+          </div>
+          <div className="nav_tab_wrap">
+            <div className="nav_tab">
+               CHAT
+            </div>
+            <div className="nav_tab n_t_selected">
+               REFIL
+            </div>
           </div>
         </div>
     );
