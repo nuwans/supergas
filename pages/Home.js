@@ -1,6 +1,7 @@
 import React from "react";
 import {Link } from "react-router";
 import Input from '../components/TextInput';
+import {FloatingInput} from '../components/FloatingInput';
 export default class Home extends React.Component {
 
   constructor(props, context) {
@@ -18,8 +19,15 @@ export default class Home extends React.Component {
     return (
       <div className="content">
         <div className="form">
-          <input className='f_input' type="text" onChange={this.handleChange.bind(this)} placeholder="Pin Code"></input>
-          <button className="f_btn">Next</button>
+          <FloatingInput 
+          labelName="Pin Code"
+          type="text"
+          handleChange={()=>{
+            this.handleChange.bind(this);
+          }} />
+          <div className="group">
+            <button className="f_btn">Next</button>
+          </div>
         </div>
       </div>
     );
