@@ -18,6 +18,9 @@ export default class FloatingSelect extends React.Component {
           onChange={this.handleChange.bind(this)}
           type={this.props.type}
           defaultValue={this.props.value}
+          required
+          autoCapitalize="off"
+          autoComplete="off"
           autoCorrect="off" />
         <span className={this.props.error ? "highlight invalid" : "highlight"}></span>
         <span className={this.props.error ? "bar invalid" :"bar"}></span>
