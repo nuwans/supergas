@@ -2,6 +2,7 @@ import React from "react";
 import {Link } from "react-router";
 import Input from '../components/TextInput';
 import FloatingInput from '../components/FloatingInput';
+import FloatingSelect from '../components/FloatingSelect';
 export default class Home extends React.Component {
 
   constructor(props, context) {
@@ -10,7 +11,8 @@ export default class Home extends React.Component {
     console.log(this.state);
     this.state = {
       Pincode: '',
-      PincodeError:''
+      PincodeError:'',
+      showForm:false
     }
   } 
   handleChange(name,value){
@@ -21,6 +23,14 @@ export default class Home extends React.Component {
        this.setState({PincodeError:''});
     }
     this.setState({Pincode:value});
+  }
+  ValidatePin(){
+    this.setState({showForm:true});
+  }
+  handleTextInput(name,value){
+    var temp={};
+    temp[name]=value;
+    this.setState(temp);
   }
   render() {
     return (
@@ -33,8 +43,37 @@ export default class Home extends React.Component {
             name="Pincode"
             handler={this.handleChange.bind(this)} 
           />
+          { this.state.showForm ? 
+            <FloatingInput 
+              labelName="Name"
+              type="text"
+              error={this.state.PincodeError}
+              name="Name"
+              handler={this.handleTextInput.bind(this)} 
+            />
+            : ''
+           }
+          { this.state.showForm ? 
+            <FloatingInput 
+              labelName="Full Address"
+              type="text"
+              error={this.state.PincodeError}
+              name="Address"
+              handler={this.handleTextInput.bind(this)} 
+            />
+            : ''
+           }
+          { this.state.showForm ? 
+            <FloatingSelect 
+              labelName="Connection Type"
+              error={this.state.PincodeError}
+              name="ConnectionType"
+              handler={this.handleTextInput.bind(this)} 
+            />
+            : ''
+           }
           <div className="group">
-            <button className="f_btn">Next</button>
+            <button onClick={this.ValidatePin.bind(this)} className="f_btn">Next</button>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-export default class FloatingInput extends React.Component {
+export default class FloatingSelect extends React.Component {
   constructor() {
     super()
     console.log(this.props);
@@ -31,11 +31,3 @@ export default class FloatingInput extends React.Component {
   }
 }
 
-FloatingInput.propTypes = {
- aStringProp: React.PropTypes.string
-};
-FloatingInput.defaultProps = {
- type:'text',
- error:false,
- value:''
-};

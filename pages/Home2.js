@@ -1,6 +1,7 @@
 import React from "react";
 import {Link } from "react-router";
 import Input from '../components/TextInput';
+import FloatingInput from '../components/FloatingInput';
 import Select from '../components/Select';
 export default class Home extends React.Component {
 
