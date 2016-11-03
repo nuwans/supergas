@@ -5,7 +5,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "nodemon server/server.js --ignore components",
+<<<<<<< HEAD
     "build" : "webpack --config webpack.production.config.js"
+=======
+    "build" : "webpack --config webpack.config.js"
+>>>>>>> ba471d7dec88982991f1e953db8b804af010df71
 
   },
   "repository": {

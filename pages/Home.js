@@ -2,7 +2,10 @@ import React from "react";
 import {Link } from "react-router";
 import Input from '../components/TextInput';
 import FloatingInput from '../components/FloatingInput';
+<<<<<<< HEAD
 import FloatingSelect from '../components/FloatingSelect';
+=======
+>>>>>>> ba471d7dec88982991f1e953db8b804af010df71
 export default class Home extends React.Component {
 
   constructor(props, context) {
@@ -11,8 +14,12 @@ export default class Home extends React.Component {
     console.log(this.state);
     this.state = {
       Pincode: '',
+<<<<<<< HEAD
       PincodeError:'',
       showForm:false
+=======
+      PincodeError:''
+>>>>>>> ba471d7dec88982991f1e953db8b804af010df71
     }
   } 
   handleChange(name,value){
@@ -23,6 +30,7 @@ export default class Home extends React.Component {
        this.setState({PincodeError:''});
     }
     this.setState({Pincode:value});
+<<<<<<< HEAD
   }
   ValidatePin(){
     this.setState({showForm:true});
@@ -31,6 +39,8 @@ export default class Home extends React.Component {
     var temp={};
     temp[name]=value;
     this.setState(temp);
+=======
+>>>>>>> ba471d7dec88982991f1e953db8b804af010df71
   }
   render() {
     return (
@@ -43,6 +53,7 @@ export default class Home extends React.Component {
             name="Pincode"
             handler={this.handleChange.bind(this)} 
           />
+<<<<<<< HEAD
           { this.state.showForm ? 
             <FloatingInput 
               labelName="Name"
@@ -74,6 +85,10 @@ export default class Home extends React.Component {
            }
           <div className="group">
             <button onClick={this.ValidatePin.bind(this)} className="f_btn">Next</button>
+=======
+          <div className="group">
+            <button className="f_btn">Next</button>
+>>>>>>> ba471d7dec88982991f1e953db8b804af010df71
           </div>
         </div>
       </div>
